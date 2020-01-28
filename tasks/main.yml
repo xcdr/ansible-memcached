@@ -1,0 +1,12 @@
+---
+- name: Install the memcached package
+  apt: name=memcached
+
+- name: Configure memcached
+  lineinfile:
+    dest: /etc/memcached.conf
+    regexp: "^{{ item.key }} *"
+    line: "{{ item.key }} {{ item.value }}"
+  with_items: "{{ memcached_params }}"
+  notify:
+    - restart memcached
