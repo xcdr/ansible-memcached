@@ -1,6 +1,8 @@
 ---
 memcached_params:
-  - key: -l
-    value: 127.0.0.1
-  - key: -m
-    value: 64
+  - key: "-l"
+    value: "127.0.0.1"
+  - key: "-p"
+    value: "11211"
+  - key: "-m"
+    value: "64"

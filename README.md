@@ -22,9 +22,9 @@ Add this to your `requirements.yml`:
   roles: xcdr.memcached
 
   vars:
-   memcached_params:
-   - key: -l
-     value: 0.0.0.0
+    memcached_params:
+    - key: "-l"
+      value: "0.0.0.0"
 ```
 
 ## License
